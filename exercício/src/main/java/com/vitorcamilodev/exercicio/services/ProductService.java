@@ -1,7 +1,5 @@
 package com.vitorcamilodev.exercicio.services;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -32,13 +30,28 @@ public class ProductService {
 	@Transactional
 	public ProductDTO insert(ProductDTO dto) {
 		Product product = new Product();
-		product.setName(dto.getName());
-		product.setDescription(dto.getDescription());
-		product.setPrice(dto.getPrice());
-		product.setImgUrl(dto.getImgUrl());
+		copyToEntity(dto, product);
 		
 		product = productRepository.save(product);
 		return new ProductDTO(product);
 	}
+	
+	@Transactional
+	public ProductDTO update(Long id, ProductDTO dto) {
+		Product product = productRepository.getReferenceById(id);	
+		copyToEntity(dto, product);
+		
+		product = productRepository.save(product);
+		return new ProductDTO(product);
+	}
+	
+	private void copyToEntity(ProductDTO dto, Product product) {
+		product.setName(dto.getName());
+		product.setDescription(dto.getDescription());
+		product.setPrice(dto.getPrice());
+		product.setImgUrl(dto.getImgUrl());
+	}
+	
+	
 
 }
