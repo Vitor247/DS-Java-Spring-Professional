@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "fec69858-468c-4afa-b8f0-55276854dd52",
+		"name": "Salvar para um",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47798928",
+		"_collection_link": "https://vittor-camilo-8636343.postman.co/workspace/Intensiv%C3%A3o~6f9522f9-b80e-45fe-a63c-f2a79a70f0fe/collection/47798928-fec69858-468c-4afa-b8f0-55276854dd52?action=share&source=collection_link&creator=47798928"
+	},
+	"item": [
+		{
+			"name": "New Person",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Nova Pessoa\",\r\n    \"salary\": 8000.0,\r\n    \"department\": {\r\n        \"id\": 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/people",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"people"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Person",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Nova Pessoa\",\r\n    \"salary\": 8000.0,\r\n    \"departmentId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/people",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"people"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
