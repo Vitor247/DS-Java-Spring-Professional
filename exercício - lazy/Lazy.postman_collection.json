@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "9b64d211-7742-4bd4-96d2-5402030e8e9f",
+		"name": "Lazy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47798928",
+		"_collection_link": "https://vittor-camilo-8636343.postman.co/workspace/Intensiv%C3%A3o~6f9522f9-b80e-45fe-a63c-f2a79a70f0fe/collection/47798928-9b64d211-7742-4bd4-96d2-5402030e8e9f?action=share&source=collection_link&creator=47798928"
+	},
+	"item": [
+		{
+			"name": "Employee by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/employees/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Employee by id min",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/employees/1/min",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees",
+						"1",
+						"min"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Employees with departments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Department by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/departments/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"departments",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Department employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/departments/1/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"departments",
+						"1",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
