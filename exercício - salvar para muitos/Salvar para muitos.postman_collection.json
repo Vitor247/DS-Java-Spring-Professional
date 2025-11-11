@@ -14,7 +14,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": 5,\r\n    \"name\": \"Produto novo\",\r\n    \"price\": 1000.0,\r\n    \"categories\": [\r\n        {\r\n            \"id\": 2,\r\n            \"name\": null\r\n        },\r\n        {\r\n        \"id\": 3,\r\n        \"name\": null\r\n        }\r\n    ]\r\n}"
+					"raw": "{\r\n    \"id\": 5,\r\n    \"name\": \"Novo produto\",\r\n    \"price\": 1000.0,\r\n    \"categories\": [\r\n        {\r\n            \"id\": 2,\r\n            \"name\": null\r\n        },\r\n        {\r\n        \"id\": 3,\r\n        \"name\": null\r\n        }\r\n    ]\r\n}"
 				},
 				"url": {
 					"raw": "http://localhost:8080/products",
