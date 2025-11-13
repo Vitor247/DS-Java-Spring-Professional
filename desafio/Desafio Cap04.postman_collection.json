@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "4d0fb6ff-2ec9-4834-ba85-737ed4aef4f3",
+		"name": "Desafio Cap04",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47798928",
+		"_collection_link": "https://vittor-camilo-8636343.postman.co/workspace/Intensiv%C3%A3o~6f9522f9-b80e-45fe-a63c-f2a79a70f0fe/collection/47798928-4d0fb6ff-2ec9-4834-ba85-737ed4aef4f3?action=share&source=collection_link&creator=47798928"
+	},
+	"item": [
+		{
+			"name": "Sale by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/sales/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sales",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Report (test 1)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/sales/report",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sales",
+						"report"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Report (test 2)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/sales/report?minDate=2022-05-01&maxDate=2022-05-31&name=odinson",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sales",
+						"report"
+					],
+					"query": [
+						{
+							"key": "minDate",
+							"value": "2022-05-01"
+						},
+						{
+							"key": "maxDate",
+							"value": "2022-05-31"
+						},
+						{
+							"key": "name",
+							"value": "odinson"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Summary (test 1)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/sales/summary?minDate=2022-01-01&maxDate=2022-06-30",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sales",
+						"summary"
+					],
+					"query": [
+						{
+							"key": "minDate",
+							"value": "2022-01-01"
+						},
+						{
+							"key": "maxDate",
+							"value": "2022-06-30"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Summary (test 2)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/sales/summary",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sales",
+						"summary"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
