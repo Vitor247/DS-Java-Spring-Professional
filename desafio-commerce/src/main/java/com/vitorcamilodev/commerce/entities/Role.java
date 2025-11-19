@@ -2,6 +2,8 @@ package com.vitorcamilodev.commerce.entities;
 
 import java.util.Objects;
 
+import org.springframework.security.core.GrantedAuthority;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -10,14 +12,15 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "tb_role")
-public class Role{
+public class Role implements GrantedAuthority {
+	private static final long serialVersionUID = 1L;
 
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-    
+
 	private String authority;
-	
+
 	public Role() {
 
 	}
@@ -34,7 +37,8 @@ public class Role{
 	public void setId(Long id) {
 		this.id = id;
 	}
-	
+
+	@Override
 	public String getAuthority() {
 		return authority;
 	}
@@ -59,5 +63,5 @@ public class Role{
 		Role other = (Role) obj;
 		return Objects.equals(authority, other.authority);
 	}
-	
+
 }
