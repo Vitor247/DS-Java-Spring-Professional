@@ -8,6 +8,8 @@ import com.vitorcamilodev.commerce.entities.Order;
 import com.vitorcamilodev.commerce.entities.OrderItem;
 import com.vitorcamilodev.commerce.entities.OrderStatus;
 
+import jakarta.validation.constraints.NotEmpty;
+
 public class OrderDTO {
 
 	private Long id;
@@ -18,7 +20,12 @@ public class OrderDTO {
 
 	private PaymentDTO payment;
 
+	@NotEmpty(message = "Deve ter pelo menos um item")
 	private List<OrderItemDTO> items = new ArrayList<>();
+	
+	public OrderDTO() {
+
+	}
 
 	public OrderDTO(Long id, Instant moment, OrderStatus status, ClientDTO client, PaymentDTO payment) {
 		this.id = id;
